@@ -17,12 +17,10 @@ namespace TheatreSeatingTest
     {
         //class variable
         private TheatreSeating.Repository.GetList _repo;
-        //class variable
+        //class mock listof customer
         private IList<TheatreSeating.Models.Customer> _modelCustomer;
-        //class variable
+        //class mock sample list of section
         private IList<TheatreSeating.Models.Section> _modelSection;
-        //class variable
-        private TheatreSeating.BusinessLogic.ArrangeSeat _blayer;
 
         /// <summary>
         /// Code that is run before each test
