@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheatreSeating.Models
+namespace TheatreSeating
 {
     public class Section
     {
@@ -12,7 +12,7 @@ namespace TheatreSeating.Models
         public int SectionId { get; set; }
         public int TotalnumberofSeats { get; set; }
         public int OccupiedSeats { get; set; }
-        public List<string> GivenTo { get; set; }
+        public List<Customer> GivenTo { get; set; }
 
         public int EmpltySeats
         {
@@ -20,13 +20,13 @@ namespace TheatreSeating.Models
         }
 
 
-        public void AllocateThisSection(string[] name, int requiredSeats)
+        public void AllocateThisSection(Customer[] name, int requiredSeats)
         {
             if (EmpltySeats >= requiredSeats)
             {
                 OccupiedSeats += requiredSeats;
                 GivenTo.AddRange(name);
-
+                this.GivenTo.All(x => x.IsSeatAllocated = true);
             }
             else
             {
@@ -34,7 +34,7 @@ namespace TheatreSeating.Models
             }
         }
 
-        public void RemoveThisAllocation()
+        public void DeallocateThisAllocation()
         {
             OccupiedSeats = 0;
             GivenTo.Clear();

@@ -38,7 +38,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TheatreSettingTests.cs" />
+    <Compile Include="TheatreSeatingTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="nunit.framework">
