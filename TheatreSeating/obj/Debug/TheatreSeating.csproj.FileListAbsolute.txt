@@ -1,0 +1,10 @@
+c:\users\ashish\documents\visual studio 2013\Projects\TheatreSeating\TheatreSeating\bin\Debug\TheatreSeating.exe.config
+c:\users\ashish\documents\visual studio 2013\Projects\TheatreSeating\TheatreSeating\bin\Debug\TheatreSeating.exe
+c:\users\ashish\documents\visual studio 2013\Projects\TheatreSeating\TheatreSeating\bin\Debug\TheatreSeating.pdb
+c:\users\ashish\documents\visual studio 2013\Projects\TheatreSeating\TheatreSeating\obj\Debug\TheatreSeating.exe
+c:\users\ashish\documents\visual studio 2013\Projects\TheatreSeating\TheatreSeating\obj\Debug\TheatreSeating.pdb
+C:\Users\ashish\Documents\visual studio 2013\Projects\TheatreSeatingArrangement\TheatreSeating\bin\Debug\TheatreSeating.exe.config
+C:\Users\ashish\Documents\visual studio 2013\Projects\TheatreSeatingArrangement\TheatreSeating\obj\Debug\TheatreSeating.exe
+C:\Users\ashish\Documents\visual studio 2013\Projects\TheatreSeatingArrangement\TheatreSeating\obj\Debug\TheatreSeating.pdb
+C:\Users\ashish\Documents\visual studio 2013\Projects\TheatreSeatingArrangement\TheatreSeating\bin\Debug\TheatreSeating.exe
+C:\Users\ashish\Documents\visual studio 2013\Projects\TheatreSeatingArrangement\TheatreSeating\bin\Debug\TheatreSeating.pdb
