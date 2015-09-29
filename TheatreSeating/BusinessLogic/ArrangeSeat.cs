@@ -23,8 +23,7 @@ namespace TheatreSeating.BusinessLogic
                     FirstOrDefault(x => x.EmpltySeats >= cus.SeatRequest);
                 if (result != null)
                 {
-                    result.OccupiedSeats += cus.SeatRequest;
-                    result.GivenTo.Add(cus.Name);
+                    result.AllocateThisSection(new string[] { cus.Name }, cus.SeatRequest);
                     cus.IsSeatAllocated = true;
                 }
                 else
@@ -61,10 +60,8 @@ namespace TheatreSeating.BusinessLogic
                 {
                     if (section[i].EmpltySeats >= section[j].OccupiedSeats && section[j].OccupiedSeats > 0)
                     {
-                        section[i].OccupiedSeats += section[j].OccupiedSeats;
-                        section[i].GivenTo.AddRange(section[j].GivenTo);
-                        section[j].GivenTo.Clear();
-                        section[j].OccupiedSeats = 0;
+                        section[i].AllocateThisSection(section[j].GivenTo.ToArray(), section[j].OccupiedSeats);
+                        section[j].RemoveThisAllocation();
                     }
                 }
             }

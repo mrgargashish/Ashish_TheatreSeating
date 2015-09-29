@@ -51,6 +51,26 @@ namespace TheatreSeatingTest
             //cusList.Add("Miller", 12);
         }
 
+        [Test]
+        public void AllocateThisSectionTest()
+        {
+            var sectionAttocate = _modelSection.First(x => x.EmpltySeats >= 6);
+            sectionAttocate.AllocateThisSection(new string[]{"Ashish"}, 6);
+            Assert.Contains("Ashish", sectionAttocate.GivenTo);
+            Assert.AreEqual(6, sectionAttocate.OccupiedSeats);
+        }
+
+
+        [Test]
+        public void RemoveThisSectionTest()
+        {
+            var sectionAttocate = _modelSection.First(x => x.EmpltySeats >= 6);
+            sectionAttocate.AllocateThisSection(new string[] { "Ashish" }, 6);
+            sectionAttocate.RemoveThisAllocation();
+            Assert.AreEqual(0,sectionAttocate.GivenTo.Count);
+            Assert.AreEqual(0, sectionAttocate.OccupiedSeats);
+        }
+
 
         [Test]
         public void BestFitArrangementTest()
